@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #5333ed;" styleClass="side">
+         <children>
+            <Label layoutX="29.0" layoutY="187.0" text="Sipsewana" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="252.0" prefHeight="45.0" prefWidth="131.0" text="Institute" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="BOOK" layoutX="93.0" layoutY="170.0" size="100" wrappingWidth="89.0000065267086" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="575.0" layoutY="2.0" prefHeight="28.0" prefWidth="29.0" />
+      <ImageView fx:id="imgClose" fitHeight="28.0" fitWidth="25.0" layoutX="563.0" layoutY="18.0" nodeOrientation="INHERIT" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-macos-close-48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <FontAwesomeIconView fill="#5333ed" glyphName="USERS" layoutX="439.0" layoutY="150.0" size="35" wrappingWidth="41.0" />
+      <Text fill="#5333ed" layoutX="404.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="111.513671875">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btnlogin" buttonType="RAISED" layoutX="415.0" layoutY="325.0" onAction="#login" prefHeight="28.0" prefWidth="89.0" style="-fx-background-color: #5333ed;" text="Login" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="textusername" layoutX="370.0" layoutY="209.0" prefHeight="27.0" prefWidth="180.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #5333ed; -fx-border-width: 0px 0px 2px 0px;" />
+      <FontAwesomeIconView fill="#5333ed" glyphName="USER" layoutX="340.0" layoutY="228.0" size="18" />
+      <PasswordField fx:id="txtpassword" layoutX="370.0" layoutY="270.0" onAction="#login" prefHeight="27.0" prefWidth="180.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #5333ed; -fx-border-width: 0px 0px 2px 0px;" />
+      <FontAwesomeIconView fill="#5333ed" glyphName="KEY" layoutX="338.0" layoutY="289.0" size="18" />
+      <Label fx:id="lblmessage" layoutX="370.0" layoutY="308.0" prefHeight="17.0" prefWidth="180.0" textFill="RED" />
+   </children>
+</AnchorPane>

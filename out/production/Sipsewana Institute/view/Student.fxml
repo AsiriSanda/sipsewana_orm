@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentController">
+   <children>
+      <JFXTextField fx:id="txtname" focusColor="#5234eb96" labelFloat="true" layoutX="32.0" layoutY="128.0" prefHeight="25.0" prefWidth="135.0" promptText="Student Name" />
+      <Label layoutX="32.0" layoutY="84.0" text="Student ID :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblId" layoutX="122.0" layoutY="84.0" text="S001">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtaddress" focusColor="#5234eb" labelFloat="true" layoutX="32.0" layoutY="167.0" prefHeight="26.0" prefWidth="135.0" promptText="Student Address" />
+      <JFXTextField fx:id="txtcontact" focusColor="#5234eb" labelFloat="true" layoutX="231.0" layoutY="127.0" prefHeight="26.0" prefWidth="136.0" promptText="Student Contact" />
+      <JFXDatePicker fx:id="dtdob" defaultColor="#5234eb" layoutX="232.0" layoutY="165.0" prefHeight="29.0" prefWidth="136.0" promptText="Date Of Birth" />
+      <JFXComboBox fx:id="cmdgender" focusColor="#5234eb" labelFloat="true" layoutX="444.0" layoutY="127.0" prefHeight="26.0" prefWidth="136.0" promptText="Gender" />
+      <TableView fx:id="table" layoutX="10.0" layoutY="208.0" prefHeight="185.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="76.0" text="ID" />
+          <TableColumn fx:id="colname" prefWidth="84.0" text="Name" />
+            <TableColumn fx:id="coladdress" prefWidth="92.0" text="Address" />
+            <TableColumn fx:id="colcontact" text="Contact" />
+            <TableColumn fx:id="coldob" text="DOB" />
+            <TableColumn fx:id="colgender" prefWidth="91.0" text="Gender" />
+            <TableColumn fx:id="coloperation" prefWidth="74.0" text="Delete" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnadd" buttonType="RAISED" layoutX="444.0" layoutY="167.0" onAction="#add" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #5333ed;" styleClass="buttonn" text="Add Student" textFill="WHITE" />
+      <TextField fx:id="txtsearch" layoutX="444.0" layoutY="83.0" onAction="#search" prefHeight="27.0" prefWidth="136.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #5333ed; -fx-border-width: 0px 0px 2px 0px;" />
+      <AnchorPane prefHeight="72.0" prefWidth="600.0" style="-fx-background-color: #5333ed;">
+         <children>
+            <Label layoutX="223.0" layoutY="17.0" text="Add Student" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgHome" fitHeight="36.0" fitWidth="27.0" layoutX="14.0" layoutY="23.0" onMouseClicked="#home" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-back-to-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgClose" fitHeight="26.0" fitWidth="28.0" layoutX="549.0" layoutY="23.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-cancel-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
